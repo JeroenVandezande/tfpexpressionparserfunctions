@@ -157,6 +157,17 @@ type
     property MaxNumberOfArgs: Integer read 1;
   end;
 
+  TCountFunction = sealed public class(IFormulaFunction)
+  private
+  public
+    property ResultType: TResultType read TResultType.Float;
+    method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
+    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    property Description: String read 'Counts the occurences of True or numerical values greater than 0';
+    property Name: String read 'Count';
+    property MaxNumberOfArgs: Integer read 20;
+  end;
+
 implementation
 
 class method TINternalTools.GetListOfDoublesWithoutNaNValues(aValues: TExprParameterArray): List<Double>;
@@ -322,6 +333,27 @@ end;
 method TDiffPFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
 begin
   exit (Count < 2) and (aArgType = TResultType.Float);
+end;
+
+method TCountFunction.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
+begin
+  aResult.ResFloat := 0; 
+  for each arg in Args do
+  begin
+    if arg.ResultType = TResultType.Boolean then
+    begin
+      if arg.ResBoolean then aResult.ResFloat := aResult.ResFloat + 1;
+    end;
+    if arg.ResultType = TResultType.Float then
+    begin
+      if (arg.ResFloat > 0) then aResult.ResFloat := aResult.ResFloat + 1;
+    end;
+  end;
+end;
+
+method TCountFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+begin
+  exit ((aArgType = TResultType.Float) or (aArgType = TResultType.Boolean));
 end;
 
 

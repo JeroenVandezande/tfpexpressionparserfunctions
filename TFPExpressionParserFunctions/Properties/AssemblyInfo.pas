@@ -12,10 +12,10 @@ uses
 [assembly: AssemblyConfiguration('')]
 [assembly: AssemblyCompany('')]
 [assembly: AssemblyProduct('')]
-[assembly: AssemblyCopyright('')]
+[assembly: AssemblyCopyright('Copyright (c) 2018 Jeroen Vandezande')]
 [assembly: AssemblyTrademark('')]
 [assembly: AssemblyCulture('')]
-[assembly: AssemblyVersion('1.0.0.1')]
+[assembly: AssemblyVersion('1.2.0.0')]
 [assembly: NeutralResourcesLanguage('')]
 [assembly: ComVisible(false)]
 
