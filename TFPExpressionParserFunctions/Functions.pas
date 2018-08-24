@@ -44,7 +44,7 @@ type
     method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the coefficient of variation of the whole population';
     property Name: String read 'CV_P';
-    property MaxNumberOfArgs: Integer read 10;
+    property MaxNumberOfArgs: Integer read 100;
   end;
 
   TCVFunctionS = sealed public class(IFormulaFunction)
@@ -55,7 +55,7 @@ type
     method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the coefficient of variation of the sample population';
     property Name: String read 'CV_S';
-    property MaxNumberOfArgs: Integer read 10;
+    property MaxNumberOfArgs: Integer read 100;
   end;
 
   TAverageFunction  = sealed public class(IFormulaFunction)
@@ -66,7 +66,7 @@ type
     method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the average of the whole population';
     property Name: String read 'AVERAGE';
-    property MaxNumberOfArgs: Integer read 10;
+    property MaxNumberOfArgs: Integer read 100;
   end;
 
   TSTDevFunctionP = sealed public class(IFormulaFunction)
@@ -77,7 +77,7 @@ type
     method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the standard deviation of the whole population';
     property Name: String read 'STDEV_P';
-    property MaxNumberOfArgs: Integer read 10;
+    property MaxNumberOfArgs: Integer read 100;
   end;
 
   TSTDevFunctionS = sealed public class(IFormulaFunction)
@@ -88,7 +88,7 @@ type
     method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the standard deviation of the sample population';
     property Name: String read 'STDEV_S';
-    property MaxNumberOfArgs: Integer read 10;
+    property MaxNumberOfArgs: Integer read 100;
   end;
 
   TLDAFunction = sealed public class(IFormulaFunction)
@@ -99,7 +99,7 @@ type
     method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the largest distance to the average';
     property Name: String read 'LDA';
-    property MaxNumberOfArgs: Integer read 10;
+    property MaxNumberOfArgs: Integer read 100;
   end;
 
   TDiffPFunction = sealed public class(IFormulaFunction)
@@ -165,7 +165,7 @@ type
     method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Counts the occurences of True or numerical values greater than 0';
     property Name: String read 'Count';
-    property MaxNumberOfArgs: Integer read 20;
+    property MaxNumberOfArgs: Integer read 100;
   end;
 
 implementation
