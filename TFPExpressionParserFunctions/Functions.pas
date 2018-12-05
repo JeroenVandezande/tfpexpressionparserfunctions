@@ -19,7 +19,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'The natural logarithm';
     property Name: String read 'LN';
     property MaxNumberOfArgs: Integer read 1;
@@ -30,7 +30,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Intermediate If';
     property Name: String read 'IIF';
     property MaxNumberOfArgs: Integer read 3;
@@ -41,7 +41,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the coefficient of variation of the whole population';
     property Name: String read 'CV_P';
     property MaxNumberOfArgs: Integer read 100;
@@ -52,7 +52,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the coefficient of variation of the sample population';
     property Name: String read 'CV_S';
     property MaxNumberOfArgs: Integer read 100;
@@ -63,7 +63,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the average of the whole population';
     property Name: String read 'AVERAGE';
     property MaxNumberOfArgs: Integer read 100;
@@ -74,7 +74,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the standard deviation of the whole population';
     property Name: String read 'STDEV_P';
     property MaxNumberOfArgs: Integer read 100;
@@ -85,7 +85,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the standard deviation of the sample population';
     property Name: String read 'STDEV_S';
     property MaxNumberOfArgs: Integer read 100;
@@ -96,7 +96,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the largest distance to the average';
     property Name: String read 'LDA';
     property MaxNumberOfArgs: Integer read 100;
@@ -107,7 +107,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates the percentage of the difference between the two values';
     property Name: String read 'DIFFP';
     property MaxNumberOfArgs: Integer read 2;
@@ -118,7 +118,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Calculates Square Root';
     property Name: String read 'SQRT';
     property MaxNumberOfArgs: Integer read 1;
@@ -129,7 +129,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'The number e raised to the power d.';
     property Name: String read 'EXP';
     property MaxNumberOfArgs: Integer read 1;
@@ -140,7 +140,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Returns the base 10 logarithm of a specified number.';
     property Name: String read 'LOG10';
     property MaxNumberOfArgs: Integer read 1;
@@ -151,7 +151,7 @@ type
   public
     property ResultType: TResultType read TResultType.String;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'converts a floating point value into a text value';
     property Name: String read 'ToText';
     property MaxNumberOfArgs: Integer read 1;
@@ -162,7 +162,7 @@ type
   public
     property ResultType: TResultType read TResultType.Float;
     method Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
-    method MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+    method MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
     property Description: String read 'Counts the occurences of True or numerical values greater than 0';
     property Name: String read 'Count';
     property MaxNumberOfArgs: Integer read 100;
@@ -187,7 +187,7 @@ begin
   aResult.ResFloat := Math.Log10(val);
 end;
 
-method TLog10Function.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TLog10Function.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
   result := true;
 end;
@@ -198,18 +198,32 @@ begin
   aResult.ResFloat := Math.Log(val);
 end;
 
-method TLNFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TLNFunction.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
    result := true;
 end;
 
 method TToTextFunction.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
 begin
-  var val := Args[0].ResFloat;
-  aResult.ResString := val.ToString("0.000");
+    case Args[0].ResultType of
+        TResultType.Float:
+        begin
+            var val := Args[0].ResFloat;
+            aResult.ResString := val.ToString("0.000");
+        end;
+        TResultType.Boolean:
+        begin
+            var val := Args[0].ResBoolean;
+            aResult.ResString := val.ToString();
+        end;
+        TResultType.String:
+        begin
+            aResult.ResString := Args[0].ResString;
+        end;
+    end;
 end;
 
-method TToTextFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TToTextFunction.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
   result := true;
 end;
@@ -220,9 +234,9 @@ begin
   aResult.ResFloat := Statistical.CV_P(tempList);
 end;
 
-method TCVFunctionP.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TCVFunctionP.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
-  result := true;
+  exit (aArgType = TResultType.Float);
 end;
 
 method TSTDevFunctionP.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
@@ -231,9 +245,9 @@ begin
   aResult.ResFloat := Statistical.StandardDeviation_P(tempList);
 end;
 
-method TSTDevFunctionP.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TSTDevFunctionP.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
-  result := true;
+  exit (aArgType = TResultType.Float);
 end;
 
 method TLDAFunction.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
@@ -249,9 +263,9 @@ begin
   aResult.ResFloat := maxVal;
 end;
 
-method TLDAFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TLDAFunction.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
-  result := true;;
+  exit (aArgType = TResultType.Float);
 end;
 
 method TSTDevFunctionS.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
@@ -260,9 +274,9 @@ begin
   aResult.ResFloat := Statistical.StandardDeviation_S(tempList);
 end;
 
-method TSTDevFunctionS.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TSTDevFunctionS.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
-  result := true;
+  exit (aArgType = TResultType.Float);
 end;
 
 method TAverageFunction.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
@@ -271,9 +285,9 @@ begin
   aResult.ResFloat := Statistical.Average(tempList);
 end;
 
-method TAverageFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TAverageFunction.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
-  result := true;
+  exit (aArgType = TResultType.Float);
 end;
 
 method TCVFunctionS.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
@@ -282,9 +296,9 @@ begin
   aResult.ResFloat := Statistical.CV_S(tempList);
 end;
 
-method TCVFunctionS.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TCVFunctionS.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
-  result := (Count > 1);
+  exit (aArgType = TResultType.Float);
 end;
 
 method TSqrtFunction.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
@@ -292,9 +306,9 @@ begin
   aResult.ResFloat := Math.Sqrt(Args[0].ResFloat);
 end;
 
-method TSqrtFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TSqrtFunction.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
-  exit true;
+  exit (aArgType = TResultType.Float);
 end;
 
 method TExpFunction.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
@@ -302,7 +316,7 @@ begin
   aResult.ResFloat := Math.Exp(Args[0].ResFloat);
 end;
 
-method TExpFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TExpFunction.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
   exit true;
 end;
@@ -312,9 +326,12 @@ begin
   aResult.ResFloat := iif(Args[0].ResBoolean, Args[1].ResFloat, Args[2].ResFloat);
 end;
 
-method TIIFFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TIIFFunction.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
-  exit true;
+  result := false;
+  if (aArgumentIndex = 0) then result := (aArgType = TResultType.Boolean);
+  if (aArgumentIndex = 1) then result := (aArgType = TResultType.Float);
+  if (aArgumentIndex = 2) then result := (aArgType = TResultType.Float);
 end;
 
 method TDiffPFunction.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
@@ -330,9 +347,9 @@ begin
   aResult.ResFloat := ( Math.Abs(v1 - v2) / ((v1 + v2)/2) ) * 100;
 end;
 
-method TDiffPFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TDiffPFunction.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
-  exit (Count < 2) and (aArgType = TResultType.Float);
+  exit (aArgumentIndex < 2) and (aArgType = TResultType.Float);
 end;
 
 method TCountFunction.Evaluate(var aResult: TFPExpressionResult; Args: TExprParameterArray);
@@ -351,7 +368,7 @@ begin
   end;
 end;
 
-method TCountFunction.MultArgsSupported(Count: Int32; aArgType: TResultType): Boolean;
+method TCountFunction.MultArgsSupported(aArgumentIndex: Int32; aArgType: TResultType): Boolean;
 begin
   exit ((aArgType = TResultType.Float) or (aArgType = TResultType.Boolean));
 end;
